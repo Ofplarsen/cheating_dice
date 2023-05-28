@@ -61,7 +61,7 @@ class _MyDiceState extends State<MyDice> with SingleTickerProviderStateMixin {
   void initState() {
     super.initState();
     _controller = AnimationController(
-      duration: Duration(milliseconds: 700),
+      duration: Duration(milliseconds: 500),
       vsync: this,
     );
     _animation = IntTween(begin: 0, end: 4).animate(_controller)
@@ -125,8 +125,6 @@ class _MyDiceState extends State<MyDice> with SingleTickerProviderStateMixin {
     setState(() {
       _imageIndex = _rollDice();
     });
-
-    print(_imageIndex);
   }
 
   @override
